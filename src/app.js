@@ -1,10 +1,23 @@
-const express = require("express")
-const bodyParser = require("body-parser")
+const express = require("express");
+const app = express();
+const bodyParser =  require("body-parser");
+const mongoose = require("mongoose");
 
-const app = express()
+mongoose.connect('mongodb+srv://seuusuário:suasenha@cluster0.k0shz.mongodb.net/cafeterias?retryWrites=true&w=majority', {
+  useNewUrlParser: true, 
+  useUnifiedTopology: true 
+});
+
+let db = mongoose.connection;
+
+
+db.on('error', console.log.bind(console, 'connection error'));
+db.once('open', () => {
+  console.log('Conexão concluída com êxito!')
+});
 
 //rotas
-const cursos = require("./routes/cursosRoute")
+const cafeterias = require("./routes/cafeteriasRoute");
 
 //configurar body parser
 app.use(bodyParser.json());
@@ -19,6 +32,6 @@ app.use(function (req, res, next) {
     next()
   })
 
-app.use("/cursos", cursos)
+app.use("/cafeterias", cafeterias)
 
 module.exports = app

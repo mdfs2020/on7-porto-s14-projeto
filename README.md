@@ -1,16 +1,9 @@
 <h1 align="center">
     <br>
-    <p align="center">Reprograma - Semana 14 (Revisão)<p>
+    <p align="center">Reprograma - Semana 14 - Proposta do exércicio da semana <p>
 </h1>
 
-## Relembrar é viver!
-
-Vimos alguns conteúdos nessas últimas semanas, muuita coisa bacana não é mesmo?
-<br />
-<br />
-
-![this_is_fine](https://p2.trrsf.com/image/fget/cf/460/0/images.terra.com/2019/12/30/1577718484944.jpg)
-<br />
+## Relembrando conteúdos da semana:
 
 ## Banco de Dados
 <br />
@@ -333,3 +326,6 @@ UPDATE /entidade
       })
 
 ````
+
+
+Levando em consideração a todos esses conteúdos absorvidos, o objeto é criar  um CRUD de um tema já desenvolvido anteriormente.
